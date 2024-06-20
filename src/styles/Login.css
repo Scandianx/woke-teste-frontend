@@ -1,0 +1,75 @@
+/* Container geral do fundo */
+.login-backgrounds {
+    display: flex;
+    height: 100vh;
+    
+  }
+  
+  /* Parte preta (30%) */
+  .login-background-black {
+    flex: 0 0 40%;
+    background-color: black;
+  }
+  
+  /* Parte branca (70%) */
+  .login-background {
+    flex: 1;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Estilo do contêiner de login */
+  .login-container {
+    background-color: white;
+    width: 40%;
+    height: 340px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .input {
+    width: 90%;
+    padding: 20px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .login-button {
+    margin-top: 20px;
+    width: 98%;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  
+  .login-button:hover {
+    background-color: #333;
+  }
+  
+  h4 {
+    color: grey;
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  @media (max-width: 1312px) {
+    .login-background-black {
+      display: none;
+    }
+  
+    .login-background {
+      flex: 1 1 100%;
+    }
+  }
+  @media (max-width: 602px) {
+    .login-container {
+        width: 95%;
+    }
+  }

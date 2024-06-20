@@ -1,0 +1,25 @@
+.nav {
+    background-color: transparent;
+    padding: 10px;
+    z-index: 1;
+    position: fixed;
+    height: 20px;
+    width: 100%;
+    
+  }
+  
+.nav h1 {
+    color: white;
+    font-family: 'Sans-serif';
+    font-weight: 800;
+    margin-left: 80px;
+    
+  }
+
+  @media (max-width: 1312px) {
+    .nav h1 {
+        color: black;
+        margin-left: 0px;
+    }
+  }
+  
