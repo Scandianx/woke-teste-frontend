@@ -10,6 +10,9 @@ Esse projeto de teste técnico da Woke tem como objetivo criar um repositório �
 2. **Visualização de Informações Básicas**: Após autenticação, o usuário pode visualizar suas informações básicas como nome completo, telefone, email e data de nascimento.
 3. **Envio de Informações para Empresas**: O usuário pode escolher para qual empresa enviar suas informações.
 
+### Visualização prévia
+![Gif](https://github.com/Scandianx/woke-teste-frontend/blob/main/src/assets/videodemostrativo.gif)
+
 ### Tecnologias Utilizadas
 
 - **Frontend**: React.js
