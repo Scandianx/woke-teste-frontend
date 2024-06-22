@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/Login.css';
+import { toast } from 'react-toastify';
 
 const Login = ({ onLogin }) => {
   const [username, setUsername] = useState('');
@@ -18,22 +19,59 @@ const Login = ({ onLogin }) => {
 
       if (response.ok) {
         const data = await response.json();
-        // Assuming the response contains the user ID
         localStorage.setItem('userId', data);
         onLogin();
-        console.log('Login successful:', data);
+        toast.success('Login realizado com sucesso!', {
+          position: 'top-right',
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          style: {
+            backgroundColor: 'green',
+            color: 'white',
+          },
+        });
       } else {
         setError('Usuário ou senha incorretos.');
+        toast.error('Usuário ou senha incorretos.', {
+          position: 'top-right',
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          style: {
+            backgroundColor: 'red',
+            color: 'white',
+          },
+        });
       }
     } catch (error) {
       console.error('Error:', error);
       setError('Ocorreu um erro ao tentar fazer login.');
+      toast.error('Ocorreu um erro ao tentar fazer login.', {
+        position: 'top-right',
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        style: {
+          backgroundColor: 'red',
+          color: 'white',
+        },
+      });
     }
   };
 
   return (
-    <div className='login-backgrounds'>
-      <div className='login-background-black'></div>
+    <div className="login-backgrounds">
+      <div className="login-background-black"></div>
       <div className="login-background">
         <div className="login-container">
           <h2>Entrar</h2>
