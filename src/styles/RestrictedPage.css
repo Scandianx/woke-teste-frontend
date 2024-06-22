@@ -1,16 +1,164 @@
+/* RestrictedPage.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); /* Importing modern font */
+
+.corpo-restricted{
+  margin: 0;
+  font-family: 'Roboto', sans-serif; /* Apply modern font */
+  background: linear-gradient(to right, #000000, #2c2c2c); /* Darker gray gradient */
+  color: #fff;
+}
+
 .restricted-container {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .restricted-container h2 {
-    margin-bottom: 20px;
-  }
-  
-  .restricted-container p {
-    font-size: 18px;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  padding-top: 70px;
+  min-height: 100vh;
+}
+
+.user-info, .cards-container, .companies-section {
+  width: 100%;
+  max-width: 800px;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6); /* Subtle gradient */
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2); /* Refined shadow */
+  margin-bottom: 20px;
+  padding: 30px; /* Increased padding */
+  text-align: center;
+  color: #333; /* Dark text for contrast */
+}
+
+.user-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px; /* Increased margin for better spacing */
+}
+
+.companies-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.companies-section h3 {
+  margin-bottom: 10px;
+}
+
+.cards-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 20px;
+  scrollbar-color: #000 #e6e6e6; /* Scrollbar colors */
+  scrollbar-width: thin;
+}
+
+.cards-container::-webkit-scrollbar {
+  height: 10px;
+}
+
+.cards-container::-webkit-scrollbar-track {
+  background: #e6e6e6;
+  border-radius: 10px;
+  border: 1px solid #000;
+}
+
+.cards-container::-webkit-scrollbar-thumb {
+  background-color: #000;
+  border-radius: 10px;
+  border: 1px solid #e6e6e6;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  background: linear-gradient(145deg, #ffffff, #e6e6e6); /* Subtle gradient */
+  border: none;
+  padding: 20px;
+  min-width: 250px; /* Adjusted width for better visuals */
+  flex: 0 0 auto;
+  white-space: normal;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.company-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.job-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.company-name {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.job-details {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.details-button {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+}
+
+.details-button:hover {
+  background-color: #f0f0f0;
+}
+
+.apply-button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+}
+
+.apply-button:hover {
+  background-color: #333;
+}
+
+/* Footer.css */
+.footer {
+  margin-top: 20px;
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  font-size: 14px;
+  position: fixed;
+  bottom: 0;
+}

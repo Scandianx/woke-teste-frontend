@@ -1,10 +1,9 @@
 import React from 'react';
 import '../styles/Nav.css';
 
-
-const Nav = () => {
+const Nav = ({ isAuthenticated }) => {
   return (
-    <div className="nav">
+    <div className={`nav ${isAuthenticated ? 'nav-logged-in' : ''}`}>
       <h1>Woke</h1>
     </div>
   );

@@ -18,7 +18,9 @@ const Login = ({ onLogin }) => {
 
       if (response.ok) {
         const data = await response.json();
-        onLogin(username);
+        // Assuming the response contains the user ID
+        localStorage.setItem('userId', data);
+        onLogin();
         console.log('Login successful:', data);
       } else {
         setError('Usuário ou senha incorretos.');
