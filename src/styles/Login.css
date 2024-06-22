@@ -1,17 +1,17 @@
-/* Container geral do fundo */
+
 .login-backgrounds {
     display: flex;
     height: 100vh;
     
   }
   
-  /* Parte preta (30%) */
+  
   .login-background-black {
     flex: 0 0 40%;
     background-color: black;
   }
   
-  /* Parte branca (70%) */
+  
   .login-background {
     flex: 1;
     background-color: white;
@@ -20,7 +20,7 @@
     align-items: center;
   }
   
-  /* Estilo do contêiner de login */
+  
   .login-container {
     background-color: white;
     width: 40%;

@@ -5,7 +5,7 @@
   position: fixed;
   height: 50px;
   width: 100%;
-  transition: background-color 0.3s ease; /* Smooth transition */
+  transition: background-color 0.3s ease; 
 }
 
 .nav h1 {
@@ -23,10 +23,10 @@
 }
 
 .nav-logged-in {
-  background-color: black; /* Background color for logged-in state */
+  background-color: black; 
   
 }
 
 .nav-logged-in h1 {
-  color: white; /* Ensure the text color remains white */
+  color: white; 
 }

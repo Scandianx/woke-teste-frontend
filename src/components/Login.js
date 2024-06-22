@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 const Login = ({ onLogin }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  
 
   const handleLogin = async () => {
     try {
@@ -35,7 +35,7 @@ const Login = ({ onLogin }) => {
           },
         });
       } else {
-        setError('Usuário ou senha incorretos.');
+        
         toast.error('Usuário ou senha incorretos.', {
           position: 'top-right',
           autoClose: 3000,
@@ -52,7 +52,7 @@ const Login = ({ onLogin }) => {
       }
     } catch (error) {
       console.error('Error:', error);
-      setError('Ocorreu um erro ao tentar fazer login.');
+      
       toast.error('Ocorreu um erro ao tentar fazer login.', {
         position: 'top-right',
         autoClose: 3000,
@@ -95,7 +95,7 @@ const Login = ({ onLogin }) => {
             />
           </div>
           <button className="login-button" onClick={handleLogin}>Entrar</button>
-          {error && <p className="error">{error}</p>}
+          
         </div>
       </div>
     </div>
